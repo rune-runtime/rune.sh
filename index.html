@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    <title>Rune</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Druk Wide Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Druk Wide Bold Bold'), url('DrukWideBold.woff') format('woff');
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,7 +29,7 @@
                     },
                     fontFamily: {
                         mono: ['Roboto Mono'],
-                        wide: ['Muller Next Wide Trial']
+                        wide: ['Druk Wide Bold']
                     },
                     fontWeight: {
                         wide: 700
@@ -31,6 +40,13 @@
     </script>
 
     <style type="text/css">
+        @font-face {
+            font-family: 'Druk Wide Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Druk Wide Bold Bold'), url('DrukWideBold.woff') format('woff');
+        }
+        
         .cursor {
             display: inline-block;
             color: #E9E6E1;
@@ -119,7 +135,7 @@
         <div class="grid grid-cols-5 gap-6">
             <div class="py-4 grid gap-6 col-span-3">
                 <a href="index.html" class="mb-4"><img src="logo.svg" class="h-8"></a>
-                <h1 class="font-wide text-2xl uppercase">
+                <h1 class="font-wide text-2xl uppercase h-12">
                     Make <span class="typing-platforms"></span> games with <span class="typing-languages"></span>
                 </h1>
                 <p class="font-mono text-sm lowercase">
@@ -194,7 +210,7 @@
                     </iframe>
                 </div>
                 <div class="aspect-video p-4 bg-neutral-800 relative overflow-hidden">
-                    <h3 class="font-wide uppercase text-lg z-10 relative">Testing &amp; Debugging</h3>
+                    <h3 class="font-wide uppercase text-lg z-10 relative">Debugging</h3>
                     <p class="font-mono lowercase text-sm z-10 relative">
                         A built in test harness and debug APIs help you ship with greater stability
                     </p>
