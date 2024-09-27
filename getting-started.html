@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#D83A3C',
+                        'surface-0': '#1D1B1B',
+                        'surface-2': '#4D4C4A',
+                    },
+                    fontFamily: {
+                        mono: ['Roboto Mono'],
+                        wide: ['Muller Next Wide Trial']
+                    },
+                    fontWeight: {
+                        wide: 700
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-surface-0 text-[#E9E6E1] my-12 bg-[linear-gradient(#1D1B1BEE,#1D1B1BEE),url('perlin.png')] bg-repeat bg-[length:35%]">
+    <div class="container max-w-screen-lg mx-auto grid gap-12">
+        <div class="py-4 grid gap-6">
+            <a href="index.html" class="mb-4"><img src="logo.svg" class="h-8"></a>
+            <h1 class="font-wide text-2xl uppercase">
+                Getting Started
+            </h1>
+            <p class="font-mono text-sm lowercase">
+                Get started with Rune in less than 60 seconds.
+            </p>
+        </div>
+        <div>
+            <h3 class="font-wide uppercase text-lg"><span class="text-brand-primary">1.</span> Install</h3>
+            <p class="font-mono text-sm lowercase leading-relaxed py-3">
+                Run the installer to get the latest build of the Rune CLI.
+            </p>
+            <span class="text-sm font-mono text-white">
+                <span class="text-neutral-600 select-none">$ </span>curl -fsSL https://rune.sh/install | bash
+            </span>
+        </div>
+
+        <div>
+            <h3 class="font-wide uppercase text-lg"><span class="text-brand-primary">2.</span> Create a new project</h3>
+            <p class="font-mono text-sm lowercase leading-relaxed py-3">
+                Use the Rune CLI to create a new project. Choose from the list of available templates.
+            </p>
+            <span class="text-sm font-mono text-white">
+                <span class="text-neutral-600 select-none">$ </span>rune new game --template hello-js
+            </span>
+        </div>
+
+        <div>
+            <h3 class="font-wide uppercase text-lg"><span class="text-brand-primary">3.</span> Run your new game</h3>
+            <p class="font-mono text-sm lowercase leading-relaxed py-3">
+                Your Rune project is ready for action. Try <code class="text-sm font-mono font-bold text-white">rune docs</code> to see the entire runtime API.
+            </p>
+            <span class="text-sm font-mono text-white">
+                <span class="text-neutral-600 select-none">$ </span>rune run
+            </span>
+        </div>
+
+        <div>
+            <h2 class="font-wide uppercase text-xl">Building a Rune library</h2>
+            <p class="font-mono text-sm lowercase leading-relaxed py-3 mb-6">
+                You can also use Rune to build and package libraries which can be used by other Rune developers. Write your library in your preferred language and it can be imported by any language that supports .wit bindings.
+            </p>
+            <span class="text-sm font-mono text-white">
+                <span class="text-neutral-600 select-none">$ </span>rune new package --template hello-js
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
