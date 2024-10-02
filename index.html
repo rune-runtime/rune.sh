@@ -130,10 +130,10 @@
     </script>
 </head>
 
-<body class="bg-surface-0 text-[#E9E6E1] my-12 bg-[linear-gradient(#1D1B1BEE,#1D1B1BEE),url('perlin.png')] bg-repeat bg-[length:35%]">
+<body class="bg-surface-0 text-[#E9E6E1] my-4 sm:my-12 bg-[linear-gradient(#1D1B1BEE,#1D1B1BEE),url('perlin.png')] bg-repeat bg-[length:35%]">
     <div class="container max-w-screen-lg mx-auto grid gap-12">
-        <div class="grid grid-cols-5 gap-6">
-            <div class="py-4 grid gap-6 col-span-3">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-5">
+            <div class="p-4 sm:py-4 grid gap-6 col-span-1 sm:col-span-3">
                 <a href="index.html" class="mb-4"><img src="logo.svg" class="h-8"></a>
                 <h1 class="font-wide text-2xl uppercase h-12">
                     Make <span class="typing-platforms"></span> games with <span class="typing-languages"></span>
@@ -159,16 +159,16 @@
                     </a>
                 </div> -->
             </div>
-            <div class="border border-solid border-surface-2 p-4 col-span-2 flex items-center justify-center font-mono text-neutral-600">
+            <div class="border border-solid border-surface-2 m-4 sm:m-4 p-4 col-span-1 sm:col-span-2 flex items-center justify-center font-mono text-neutral-600">
                 cool demo here.. soon :)
             </div>
         </div>
         <div>
-            <h2 class="font-wide uppercase text-xl">How does it work?</h2>
-            <p class="font-mono text-sm lowercase leading-relaxed py-3 mb-6">
+            <h2 class="font-wide uppercase text-xl px-4 sm:px-0">How does it work?</h2>
+            <p class="font-mono text-sm lowercase leading-relaxed py-3 mb-6 px-4 sm:px-0">
                 Rune builds on the shoulders of giants by leveraging WebAssembly to deliver multi-platform, multi-language support. Any language that supports wasm compilation targets can build for rune. Rune provides the runtime environment &amp; APIs that make it easy and fun to build games, engines and libraries.
             </p>
-            <div class="grid grid-cols-3 grid-rows-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 grid-rows-2 gap-6 px-4 sm:px-0">
                 <div class="aspect-video p-4 bg-neutral-800 relative overflow-hidden">
                     <h3 class="font-wide uppercase text-lg z-10 relative">GPU</h3>
                     <p class="font-mono lowercase text-sm z-10 relative">
@@ -219,7 +219,7 @@
                 </div>
             </div>
         </div>
-        <footer class="text-neutral-600 lowercase text-sm font-mono">2024 &copy; Rune.sh &ndash; by <a href="https://x.com/lwansbrough">@lwansbrough</a></footer>
+        <footer class="text-neutral-600 lowercase text-sm font-mono px-4 sm:px-0">2024 &copy; Rune.sh &ndash; by <a href="https://x.com/lwansbrough">@lwansbrough</a></footer>
     </div>
 </body>
 
