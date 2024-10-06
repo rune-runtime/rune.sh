@@ -87,10 +87,3 @@ add_install_dir_to_path() {
 download_and_extract
 
 add_install_dir_to_path
-
-if command -v $APP_NAME &> /dev/null; then
-    echo "$APP_NAME is successfully installed and ready to use."
-else
-    echo "Installation failed."
-    exit 1
-fi
