@@ -41,7 +41,7 @@ download_and_extract() {
     tar -xzf "$TMP_DIR/$APP_NAME.tar.gz" -C "$TMP_DIR"
     rm -rf "$TMP_DIR/$APP_NAME.tar.gz"
 
-    echo "Moving the binary to $INSTALL_DIR..."
+    echo "Moving the binary to $INSTALL_DIR... using sudo"
     sudo mkdir -p "$INSTALL_DIR"
     sudo mv "$TMP_DIR"/* "$INSTALL_DIR/"
 
