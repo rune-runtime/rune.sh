@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
     <title>Rune > Getting Started</title>
     <style type="text/css">
@@ -40,7 +40,7 @@
     </script>
 </head>
 
-<body class="bg-surface-0 text-[#E9E6E1] my-12 bg-[linear-gradient(#1D1B1BEE,#1D1B1BEE),url('perlin.png')] bg-repeat bg-[length:35%]">
+<body class="bg-surface-0 text-[#E9E6E1] my-4 sm:my-12 bg-[linear-gradient(#1D1B1BEE,#1D1B1BEE),url('perlin.png')] bg-repeat bg-[length:35%]">
     <div class="container max-w-screen-lg mx-auto grid gap-12">
         <div class="py-4 grid gap-6">
             <a href="index.html" class="mb-4"><img src="logo.svg" class="h-8"></a>
@@ -67,7 +67,7 @@
                 Use the Rune CLI to create a new project. Choose from the list of available templates.
             </p>
             <span class="text-sm font-mono text-white">
-                <span class="text-neutral-600 select-none">$ </span>rune new game --template hello-js
+                <span class="text-neutral-600 select-none">$ </span>rune new game
             </span>
         </div>
 
@@ -81,7 +81,7 @@
             </span>
         </div>
 
-        <div>
+        <!-- <div>
             <h2 class="font-wide uppercase text-xl">Building a Rune library</h2>
             <p class="font-mono text-sm lowercase leading-relaxed py-3 mb-6">
                 You can also use Rune to build and package libraries which can be used by other Rune developers. Write your library in your preferred language and it can be imported by any language that supports .wit bindings.
@@ -89,7 +89,7 @@
             <span class="text-sm font-mono text-white">
                 <span class="text-neutral-600 select-none">$ </span>rune new package --template hello-js
             </span>
-        </div>
+        </div> -->
     </div>
 </body>
 
