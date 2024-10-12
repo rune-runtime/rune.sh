@@ -7,7 +7,7 @@ INSTALL_DIR="/opt/rune"
 
 detect_architecture() {
     if [[ $(uname -m) == 'arm64' ]]; then
-        echo "arm64"
+        echo "aarch64"
     else
         echo "x86_64"
     fi
