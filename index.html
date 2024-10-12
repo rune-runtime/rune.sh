@@ -55,6 +55,10 @@
             animation: blink 1s steps(1) infinite;
         }
 
+        [data-os] {
+            display: none;
+        }
+
         @keyframes blink {
             50% {
                 color: transparent;
@@ -122,11 +126,41 @@
             typeWord();
         }
 
+        function getOS() {
+            const userAgent = window.navigator.userAgent
+
+            if (userAgent.includes('Windows')) {
+                return 'windows'
+            } else {
+                return 'unix'
+            }
+        }
+
+        function selectOS(os) {
+            console.log(os)
+            document.querySelectorAll(`[data-os="${os}"]`).forEach(e => e.style.display = 'initial')
+            document.querySelectorAll(`[data-os]:not([data-os="${os}"])`).forEach(e => e.style.display = 'none')
+
+            document.querySelector(`.select-os[data-os="${os}"]`).classList.add('text-white')
+            document.querySelectorAll(`.select-os:not([data-os="${os}"])`).forEach(e => {
+                e.style.display = 'unset'
+                e.classList.remove('text-white')
+            })
+        }
 
         document.addEventListener('DOMContentLoaded', function () {
-            animateTyping('.typing-platforms', ['iOS', 'Android', 'Windows', 'Linux', 'macOS'].sort(() => .5 - Math.random()), 4000);
-            animateTyping('.typing-languages', ['C#', 'C++', 'C', 'Java', 'Go', 'JS', 'Rust'].sort(() => .5 - Math.random()), 4000);
-        });
+            let os = getOS()
+            selectOS(os)
+
+            animateTyping('.typing-platforms', ['iOS', 'Android', 'Windows', 'Linux', 'macOS'].sort(() => .5 - Math.random()), 4000)
+            animateTyping('.typing-languages', ['C#', 'C++', 'C', 'Java', 'Go', 'JS', 'Rust'].sort(() => .5 - Math.random()), 4000)
+
+            document.addEventListener('click', function (e) {
+                if (e.target.classList.contains('select-os')) {
+                    selectOS(e.target.getAttribute('data-os'))
+                }
+            })
+        })
     </script>
 </head>
 
@@ -144,10 +178,19 @@
                     For any platform. In any language.
                 </p>
 
-                <div class="py-3 border-b border-solid border-surface-2">
-                    <span class="text-sm font-mono text-white">
-                        <span class="text-neutral-600 select-none">$ </span>curl -fsSL https://rune.sh/install.sh | bash
-                    </span>
+                <div class="py-3">
+                    <div class="pb-2">
+                        <span class="text-sm font-mono text-neutral-600 select-none">
+                            <span class="select-os cursor-pointer" data-os="windows">windows</span> | <span class="select-os cursor-pointer" data-os="unix">mac/linux</span>
+                        </span>
+                    </div>
+                    <div class="border-b border-solid border-surface-2">
+                        <span class="text-sm font-mono text-white">
+                            <span class="text-neutral-600 select-none">$</span>
+                            <span class="install-cmd" data-os="windows">iex (iwr -Uri "https://rune.sh/install.ps1" -UseBasicParsing)</span>
+                            <span class="install-cmd" data-os="unix">curl -fsSL https://rune.sh/install.sh | bash</span>
+                        </span>
+                    </div>
                 </div>
 
                 <div class="flex place-content-end">
